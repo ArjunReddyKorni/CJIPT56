@@ -9,8 +9,7 @@ public class Main {
 
     public static void main(String args[]){
         System.out.println("Hello World");
-
-        Main.name.charAt(0);
+        //NP=>Exception-System.out.println("Main.name.charAt(0) = " + Main.name.charAt(0));
 
 
         Map<String,Integer> map1 = new HashMap<>();
