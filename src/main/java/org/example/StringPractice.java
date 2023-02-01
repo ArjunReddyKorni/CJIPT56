@@ -1,5 +1,7 @@
 package org.example;
 
+import org.jetbrains.annotations.NotNull;
+
 public class StringPractice {
 
 
@@ -38,6 +40,8 @@ public class StringPractice {
         stringPractice.displayUpperCaseAndLowerCase("ArJuN");
         System.out.println("stringPractice.reverseTheString(\"Abhinav is a good boy\") = " + stringPractice.reverseTheString("Abhinav is a good boy"));
         System.out.println("stringPractice.reverseTheStringWords(\"this is for testing\") = " + stringPractice.reverseTheStringWords("this is for testing"));
+        System.out.println("stringPractice.isPalindrome(\"madam\") = " + stringPractice.isPalindrome("madam"));
+        System.out.println("stringPractice.checkVowels(\"\") = " + stringPractice.checkVowels("rjedgn"));
     }
 
     public int countVowels(String text){
@@ -58,7 +62,6 @@ public class StringPractice {
                 upperCase += text.charAt(i);
             } else if (text.charAt(i) <= 122 && text.charAt(i) >= 97 ) {
                 lowerCase += text.charAt(i);
-
             }
         }
         System.out.println("upperCase = " + upperCase);
@@ -66,7 +69,6 @@ public class StringPractice {
     }
 
     public String reverseTheString(String paragraph){
-
         String reversePara = "";
         String[] words = paragraph.split(" ");
         String[] reverseWords = new String[words.length];
@@ -97,6 +99,21 @@ public class StringPractice {
             reversePara += reverseWords[i] + " ";
         }
         return reversePara;
+    }
+
+    public boolean isPalindrome(@NotNull String name){
+            boolean isPalindrome = true;
+        for(int i = 0; i <= name.length()/2; i++) {
+            if (name.charAt(i) != name.charAt(name.length() - i - 1)) {
+                return false;
+            }
+        }
+        return isPalindrome;
+    }
+
+    public boolean checkVowels( String name){
+       // System.out.println("name.toLowerCase().matches(\".*[a,e,i,o,u].*\") = " + name.toLowerCase().matches(".*[a,e,i,o,u].*"));
+        return name.toLowerCase().matches(".*[aeiou].*");
     }
 
 
