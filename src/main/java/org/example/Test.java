@@ -1,10 +1,7 @@
 package org.example;
 
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 
@@ -28,18 +25,53 @@ public class Test {
 //        System.out.println(Math.random()*4);
 //        System.out.println(new Random().nextDouble()*1003);
 //    }
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+//
+//        ArrayList<Integer> marks = new ArrayList<>();
+//        marks.add(0, 200);
+//        marks.add(122);
+//        marks.add(162);
+//        marks.add(125);
+//        marks.add(722);
+//        System.out.println("marks = " + marks);
+//        List pass = marks.stream().filter(mark -> mark < 500).collect(Collectors.toList());
+//        System.out.println("pass = " + pass);
+//        List grace = marks.stream().map(mark -> mark = mark + 15).collect(Collectors.toList());
+//        System.out.println("grace = " + grace);
+//    }
 
-        ArrayList<Integer> marks = new ArrayList<>();
-        marks.add(0, 200);
-        marks.add(122);
-        marks.add(162);
-        marks.add(125);
-        marks.add(722);
-        System.out.println("marks = " + marks);
-        List pass = marks.stream().filter(mark -> mark < 500).collect(Collectors.toList());
-        System.out.println("pass = " + pass);
-        List grace = marks.stream().map(mark -> mark = mark + 15).collect(Collectors.toList());
-        System.out.println("grace = " + grace);
+//    public static void main(String[] args) {
+//        //String string = "Sample String";//
+//        Scanner scanner = new Scanner(System.in);
+//        String input = scanner.nextLine();;
+//        StringBuffer reverse = new StringBuffer();
+//
+//        for (int i = 0; i < input.length(); i++) {
+//            reverse = reverse.append(input.charAt(input.length()-i-1));
+//        }
+//        System.out.println("reverse = " + reverse);
+//    }
+
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        int inputNumber = scanner.nextInt();
+//        int reverse = 0;
+//        while (inputNumber != 0){
+//            int digit = inputNumber%10;
+//            reverse = reverse*10 +digit;
+//            inputNumber = inputNumber/10;
+//        }
+//        System.out.println("reverse = " + reverse);
+//    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
+        int factorial = 1;
+
+        for (int i = 1; i <= input; i++) {
+            factorial = factorial * i;
+        }
+        System.out.println("factorial = " + factorial);
     }
 }
