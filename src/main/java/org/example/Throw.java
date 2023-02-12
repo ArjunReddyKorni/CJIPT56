@@ -1,12 +1,12 @@
 package org.example;
 
-public class Throw {
+public class ThrowExample {
 
 
     public static void main(String[] args) {
 
         try {
-            Throw.checkOddNumber(2);
+            ThrowExample.checkOddNumber(2);
         } catch (evenNumberException e) {
             e.printStackTrace();
         }
