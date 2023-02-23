@@ -2,6 +2,8 @@ package org.example;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Scanner;
+
 public class StringPractice {
 
 
@@ -111,12 +113,24 @@ public class StringPractice {
         return isPalindrome;
     }
 
-    public boolean checkVowels( String name){
-       // System.out.println("name.toLowerCase().matches(\".*[a,e,i,o,u].*\") = " + name.toLowerCase().matches(".*[a,e,i,o,u].*"));
+    public boolean checkVowels(String name) {
+        // System.out.println("name.toLowerCase().matches(\".*[a,e,i,o,u].*\") = " + name.toLowerCase().matches(".*[a,e,i,o,u].*"));
         return name.toLowerCase().matches(".*[aeiou].*");
     }
 
+    public void minMax() {
 
+        Scanner scanner = new Scanner(System.in);
+
+        String name1 = scanner.next();
+        String name2 = scanner.next();
+
+        for (int i = 0; i < name1.length(); i++) {
+            if (name1.charAt(i) == '?' || name2.charAt(i) == '?') {
+                
+            }
+        }
+    }
 
 
 
