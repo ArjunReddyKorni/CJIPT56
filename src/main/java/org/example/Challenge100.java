@@ -9,7 +9,8 @@ public class Challenge100 {
 //        Hello();
 //        evenOrOdd();
 //        checkVoteEligibility();
-        isPrime();
+//        isPrime();
+//        sumOfEvenAndOdd();
 
     }
 
@@ -57,7 +58,7 @@ public class Challenge100 {
     }
 
     /**
-     * Program 3
+     * Program 4
      * -Write a program to check a number is prime or not
      */
     public static void isPrime() {
@@ -71,9 +72,32 @@ public class Challenge100 {
                 break;
             }
         }
+        if (number <= 2) {
+            System.out.println("Number is Not a prime number");
+            count++;
+        }
         if (count == 0)
             System.out.println("Number is prime");
-
     }
+
+    /**
+     * Program 5
+     * -Write a program to accept a number from user and find the sum of even digits and sum of odd digits
+     */
+    public static void sumOfEvenAndOdd() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number to find the sum of even and odd");
+        int evenSum = 0, oddSum = 0, number = scanner.nextInt();
+        while (number != 0) {
+            int digit = number % 10;
+            if (digit % 2 == 0)
+                evenSum += digit;
+            else
+                oddSum += digit;
+            number /= 10;
+        }
+        System.out.println("evenSum  = " + evenSum + "\n" + "oddSum = " + oddSum);
+    }
+
 
 }
