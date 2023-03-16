@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Challenge100 {
 
 
-    public static void main(String... args) {
-//        Hello();
-//        evenOrOdd();
-//        checkVoteEligibility();
-//        isPrime();
-//        sumOfEvenAndOdd();
-
-    }
+//    public static void main(String... args) {
+////        Hello();
+////        evenOrOdd();
+////        checkVoteEligibility();
+////        isPrime();
+////        sumOfEvenAndOdd();
+//
+//    }
 
 
     /**
@@ -97,6 +97,21 @@ public class Challenge100 {
             number /= 10;
         }
         System.out.println("evenSum  = " + evenSum + "\n" + "oddSum = " + oddSum);
+    }
+
+    /**
+     * Program 6
+     * -write a program to print a to z
+     */
+    public static void main(String[] args) {
+        char i;
+        for (i = 'A'; i <= 'Z'; i++) {
+            int j = i;
+
+            System.out.println(j + "= " + i);
+        }
+        char s = 546;
+        System.out.println("s = " + s);
     }
 
 
