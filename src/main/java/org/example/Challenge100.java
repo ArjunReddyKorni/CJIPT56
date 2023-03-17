@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Challenge100 {
@@ -114,5 +115,27 @@ public class Challenge100 {
         System.out.println("s = " + s);
     }
 
+    public static String findDay(int month, int day, int year) {
+        Date date = new Date(year, month, day);
+        System.out.println(date.getDate());
+        switch (date.getDay()) {
+            case 0:
+                return "WEDNESDAY";
+            case 1:
+                return "THURSDAY";
+            case 2:
+                return "FRIDAY";
+            case 3:
+                return "SATURDAY";
+            case 4:
+                return "SUNDAY";
+            case 5:
+                return "MONDAY";
+            case 6:
+                return "TUESDAY";
+        }
+
+        return null;
+    }
 
 }
