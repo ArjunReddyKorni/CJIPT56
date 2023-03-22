@@ -115,6 +115,15 @@ public class Challenge100 {
         System.out.println("s = " + s);
     }
 
+
+    /**
+     * Program 7
+     *
+     * @param month
+     * @param day
+     * @param year
+     * @return
+     */
     public static String findDay(int month, int day, int year) {
         Date date = new Date(year, month, day);
         System.out.println(date.getDate());
@@ -136,6 +145,28 @@ public class Challenge100 {
         }
 
         return null;
+    }
+
+    /**
+     * progarm8
+     *
+     * @param args
+     */
+
+    public static void main1(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        String A = sc.next();
+        String B = sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+        System.out.println(A.length() + B.length());
+        if (A.compareTo(B) > 0) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+
+        System.out.println(A.substring(0, 1).toUpperCase() + A.substring(1) + " " + B.substring(0, 1).toUpperCase() + B.substring(1));
     }
 
 }
