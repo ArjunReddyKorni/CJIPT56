@@ -169,4 +169,24 @@ public class Challenge100 {
         System.out.println(A.substring(0, 1).toUpperCase() + A.substring(1) + " " + B.substring(0, 1).toUpperCase() + B.substring(1));
     }
 
+    /**
+     * program9
+     */
+    public static void Spliting(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        // Write your code here.
+        s.trim();
+        if (s.length() == 0) {
+            System.out.println(0);
+        } else {
+            String[] ss = s.split("[!,?._'@\\s+]+");
+            System.out.println(ss.length);
+            for (int i = 0; i < ss.length; i++) {
+                System.out.println(ss[i]);
+            }
+        }
+        scan.close();
+    }
+
 }
