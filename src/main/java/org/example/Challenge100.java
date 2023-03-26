@@ -158,7 +158,7 @@ public class Challenge100 {
         Scanner sc = new Scanner(System.in);
         String A = sc.next();
         String B = sc.next();
-        /* Enter your code here. Print output to STDOUT. */
+
         System.out.println(A.length() + B.length());
         if (A.compareTo(B) > 0) {
             System.out.println("Yes");
@@ -175,7 +175,7 @@ public class Challenge100 {
     public static void Spliting(String[] args) {
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
-        // Write your code here.
+
         s.trim();
         if (s.length() == 0) {
             System.out.println(0);
@@ -189,4 +189,21 @@ public class Challenge100 {
         scan.close();
     }
 
+    /**
+     * program10
+     */
+
+    public static void swapNumbers() {
+        int number1 = 10;
+        int number2 = 20;
+        number1 = number1 + number2;
+        number2 = number1 - number2;
+        number1 -= number2;
+
+        int[] students = new int[5];
+
+
+    }
+
+   
 }
