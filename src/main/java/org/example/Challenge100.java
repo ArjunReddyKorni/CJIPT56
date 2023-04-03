@@ -2,6 +2,8 @@ package org.example;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.FileReader;
+import java.io.PrintWriter;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -285,6 +287,18 @@ public class Challenge100 {
     public static int nthFibbonacci(int n) {
         if (n <= 1)
             return n;
+//        try (PrintWriter out = response.getWriter()) {
+//            /* TODO output your page here. You may use following sample code. */
+//            out.println("<!DOCTYPE html>");
+//            out.println("<html>");
+//            out.println("<head>");
+//            out.println("<title>Servlet tryse</title>");
+//            out.println("</head>");
+//            out.println("<body>");
+//            out.println("<h1>Servlet tryse at " + request.getContextPath() + "</h1>");
+//            out.println("</body>");
+//            out.println("</html>");
+//        }
 
         return nthFibbonacci(n - 1) + nthFibbonacci(n - 2);
     }
