@@ -275,8 +275,14 @@ public class Challenge100 {
     }
 
     public static void main(String[] args) {
-        System.out.println("isogram " + isogram("pen"));
-        System.out.println("nthFibbonacci(10) = " + nthFibbonacci(5));
+//        System.out.println("isogram " + isogram("pen"));
+//        System.out.println("nthFibbonacci(10) = " + nthFibbonacci(5));
+        int i;
+        for (i = 1; i < 6; i++) {
+            if (i > 3) continue;
+        }
+        System.out.println(i);
+
     }
 
 
@@ -299,7 +305,6 @@ public class Challenge100 {
 //            out.println("</body>");
 //            out.println("</html>");
 //        }
-
         return nthFibbonacci(n - 1) + nthFibbonacci(n - 2);
     }
 
