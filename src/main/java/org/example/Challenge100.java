@@ -274,16 +274,16 @@ public class Challenge100 {
         return isogram;
     }
 
-    public static void main(String[] args) {
-//        System.out.println("isogram " + isogram("pen"));
-//        System.out.println("nthFibbonacci(10) = " + nthFibbonacci(5));
-        int i;
-        for (i = 1; i < 6; i++) {
-            if (i > 3) continue;
-        }
-        System.out.println(i);
-
-    }
+//    public static void main(String[] args) {
+//       System.out.println("isogram " + isogram("pen"));
+//       System.out.println("nthFibbonacci(10) = " + nthFibbonacci(5));
+//        int i;
+//        for (i = 1; i < 6; i++) {
+//            if (i > 3) continue;
+//        }
+//        System.out.println(i);
+//
+//    }
 
 
     /**
@@ -308,5 +308,78 @@ public class Challenge100 {
         return nthFibbonacci(n - 1) + nthFibbonacci(n - 2);
     }
 
-    
+    /**
+     * program14
+     * Count number of words in a Para And reverse them And Display
+     */
+    public void countWordsOfPara() {
+        String para = scanner.nextLine();
+        String[] split = para.split("\\s+");
+        System.out.println("Words = " + split.length);
+        StringBuffer reversedPara = new StringBuffer();
+        for (int i = 0; i < split.length; i++) {
+            reversedPara.append(split[split.length - 1 - i] + " ");
+        }
+        System.out.println("reversedPara = " + reversedPara);
+    }
+
+    public static void main(String[] args) {
+        Challenge100 c = new Challenge100();
+//        c.countWordsOfPara();
+//        c.reversingString();
+//         c.swapTwoNumbers();
+        c.checkVowels();
+    }
+
+    /**
+     * Program 15
+     * Reverse a String
+     */
+    public void reversingString() {
+        String word = scanner.nextLine();
+        StringBuffer reversedWord = new StringBuffer();
+        for (int i = 0; i < word.length(); i++) {
+            reversedWord.append(word.charAt(word.length() - 1 - i));
+        }
+        System.out.println("reversedWord = " + reversedWord);
+    }
+
+    /**
+     * program16
+     * Swap two numbers without 3rd Variable
+     */
+    public void swapTwoNumbers() {
+        double firstNumber = 10;
+        double secondNumber = 20;
+        firstNumber = firstNumber + secondNumber;
+        secondNumber = firstNumber - secondNumber;
+        firstNumber = firstNumber - secondNumber;
+        System.out.println("firstNumber = " + firstNumber);
+        System.out.println("secondNumber = " + secondNumber);
+    }
+
+    /**
+     * Program 17
+     * Check String Contains vowels and their count
+     */
+    public void checkVowels() {
+        String word = scanner.nextLine();
+        boolean containsVowels = word.matches(".*[aeiou].*");
+        int count = 0;
+        System.out.println("containsVowels = " + containsVowels);
+        if (containsVowels) {
+            for (int i = 0; i < word.length(); i++) {
+                if (word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i' || word.charAt(i) == 'o' || word.charAt(i) == 'u') {
+                    count++;
+                }
+            }
+        }
+        System.out.println("count = " + count);
+    }
+
+    /**
+     * Program 18
+     *
+     */
+
 }
