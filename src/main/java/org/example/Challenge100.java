@@ -328,7 +328,17 @@ public class Challenge100 {
 //        c.countWordsOfPara();
 //        c.reversingString();
 //         c.swapTwoNumbers();
-        c.checkVowels();
+        // c.checkVowels();
+        int[] arr = {2, 3, 4, 10, 40};
+        int key = 40;
+        int result = binarySearch(arr, key);
+
+        if (result == -1) {
+            System.out.println("Element not present");
+        } else {
+            System.out.println("Element found at index " + result);
+        }
+
     }
 
     /**
@@ -379,7 +389,22 @@ public class Challenge100 {
 
     /**
      * Program 18
-     *
+     * Binary Search
      */
+    public static int binarySearch(int[] arr, int key) {
+        int start = 0;
+        int end = arr.length - 1;
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (arr[mid] == key) {
+                return mid;
+            } else if (arr[start] < key) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        return -1;
+    }
 
 }

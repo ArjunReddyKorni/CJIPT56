@@ -58,12 +58,13 @@ public class StringPractice {
 
     public void displayUpperCaseAndLowerCase(String text){
         //ascii upper=65-90 lower=97-122
-        String upperCase = "",lowerCase = "";
+        StringBuilder upperCase = new StringBuilder();
+        StringBuilder lowerCase = new StringBuilder();
         for (int i = 0; i < text.length(); i++) {
-            if (text.charAt(i) <= 90 && text.charAt(i) >= 65 ){
-                upperCase += text.charAt(i);
-            } else if (text.charAt(i) <= 122 && text.charAt(i) >= 97 ) {
-                lowerCase += text.charAt(i);
+            if (text.charAt(i) <= 90 && text.charAt(i) >= 65) {
+                upperCase.append(text.charAt(i));
+            } else if (text.charAt(i) <= 122 && text.charAt(i) >= 97) {
+                lowerCase.append(text.charAt(i));
             }
         }
         System.out.println("upperCase = " + upperCase);
