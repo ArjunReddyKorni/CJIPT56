@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Collection;
+
 public class BasicPGM {
     public static int number1 = 0, number2 = 1, number3 = 0;
 
@@ -38,6 +40,7 @@ public class BasicPGM {
             number1 = number2;
             number2 = number3;
             fibonacciSeries(number - 1);
+            //Collection
 
 
         }

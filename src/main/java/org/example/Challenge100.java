@@ -4,14 +4,11 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.FileReader;
 import java.io.PrintWriter;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Challenge100 {
 
-    Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
 
 //    public static void main(String... args) {
 ////        Hello();
@@ -323,7 +320,7 @@ public class Challenge100 {
         System.out.println("reversedPara = " + reversedPara);
     }
 
-    public static void main(String[] args) {
+    public static void mainw(String[] args) {
         Challenge100 c = new Challenge100();
 //        c.countWordsOfPara();
 //        c.reversingString();
@@ -406,5 +403,78 @@ public class Challenge100 {
         }
         return -1;
     }
+
+    public static void EncryptingCode() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter value");
+        String str = scanner.nextLine();
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 121 || str.charAt(i) == 122 || str.charAt(i) == 90 || str.charAt(i) == 89) {
+                if (str.charAt(i) == 121) {
+                    System.out.print('a');
+                } else if (str.charAt(i) == 122) {
+                    System.out.print('b');
+                } else if (str.charAt(i) == 90) {
+                    System.out.print('B');
+                } else if (str.charAt(i) == 89) {
+                    System.out.print('A');
+                }
+
+            } else {
+                char str1 = str.charAt(i);
+                char str2 = (char) (str.charAt(i) + 2);
+                System.out.print(str2);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+//        System.out.println(".");
+//        EncryptingCode();
+        otpGeneretor();
+        // m(new int[][]{{1,12,13},{34,45,65}});
+        //encrptMobile();
+
+    }
+
+    public static void m(int[][] p) {
+        int height = p.length;
+        System.out.println("height = " + height);
+    }
+
+    /**
+     * 4 Digit Otp Generate
+     */
+    public static void otpGeneretor() {
+        int otp = 0;
+        Random random = new Random();
+        for (int i = 1; i <= 4; i++) {
+            otp = otp * 10 + random.nextInt(9);
+        }
+        System.out.println("otp = " + otp);
+        //second way
+        int randomNumber = (int) (Math.random() * 9000) + 1000;
+        System.out.println("randomNumber = " + randomNumber);
+
+    }
+
+    /**
+     * Display last 2 digits of mobile number and replace the remaining digits with #
+     */
+    public static void encrptMobile() {
+        System.out.println("Please Enter your mobile number");
+        String mobileNumber = scanner.nextLine();
+        while (mobileNumber.length() == 10 || mobileNumber.matches(".*[1234567890].*")) {
+            System.out.println("Please Enter a valid 10 digit mobile number");
+            mobileNumber = scanner.nextLine();
+            if (mobileNumber.length() == 10 || mobileNumber.matches(".*[1234567890].*")) {
+                break;
+            }
+        }
+        System.out.println("mobileNumber = " + /*mobileNumber.substring(0,7).replaceAll(".*[1234567890].*","#")*/"########" + mobileNumber.substring(8, 10));
+
+    }
+
 
 }
