@@ -5,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Challenge100 {
 
@@ -429,12 +430,16 @@ public class Challenge100 {
         }
     }
 
-    public static void main(String[] args) {
+    public static void maiP(String[] args) {
 //        System.out.println(".");
 //        EncryptingCode();
-        otpGeneretor();
+        // otpGenerator();
         // m(new int[][]{{1,12,13},{34,45,65}});
         //encrptMobile();
+        //highestString();
+        //filterByLength();
+        //removeTheGivenCharacterFromTheString();
+        //findNumbersStatingWith1();
 
     }
 
@@ -446,7 +451,7 @@ public class Challenge100 {
     /**
      * 4 Digit Otp Generate
      */
-    public static void otpGeneretor() {
+    public static void otpGenerator() {
         int otp = 0;
         Random random = new Random();
         for (int i = 1; i <= 4; i++) {
@@ -476,5 +481,70 @@ public class Challenge100 {
 
     }
 
+    /**
+     * Find the highest String from the given string
+     */
+
+    public static void highestString() {
+
+        List<String> names = Arrays.asList("Arjun", "ram", "var", "aurora");
+        //Based on the value of the String
+        List<String> highest = names.stream().max((name, name1) -> name.compareTo(name1)).stream().collect(Collectors.toList());
+        highest.forEach(System.out::println);
+        //Based on the length of the String
+        Optional<String> collect = names.stream().collect(Collectors.maxBy(Comparator.comparing(name -> name.length())));
+        System.out.println(collect.get());
+    }
+
+    /**
+     * filter by Strings having the length more the 5
+     */
+
+    public static void filterByLength() {
+
+        List<String> names = Arrays.asList("ArjunReddy", "Abhinav", "Priyanka", "ramesh", "hari", "Sam", "Harsha");
+        names.stream().filter(name -> name.length() >= 5).collect(Collectors.toList()).forEach(System.out::println);
+    }
+
+    /**
+     * Removing the given character from the String
+     */
+    public static void removeTheGivenCharacterFromTheString() {
+        String sentence = "Hello World";
+        char removeChar = 'o';
+        String newSentence = sentence.replaceAll("o", "");
+        System.out.println("newSentence = " + newSentence);
+    }
+
+    /**
+     * Find All the number starting with 1 using java8 and print in natural sorting order
+     * {12312,3534534,454,2342,123,5675,1235}->input
+     * Output -> 123,1235,12312
+     */
+    public static void findNumbersStatingWith1() {
+        List<Integer> numbers = Arrays.asList(12312, 3534534, 454, 2342, 123, 5675, 1235);
+        numbers.stream()
+                .map(number -> number + "")
+                .filter(number -> number.startsWith("1"))
+                .map(number -> Integer.parseInt(number))
+                .sorted().forEach(System.out::println);
+    }
+
+    /**
+     * Intersection of two Arrays and finding the common elements and unique
+     * Ex:- arr1= [1,2,34,5,6,2] arr2 =[23,2,34,56,78,2] output:-[2,34]
+     */
+    public static void intersectionOfArrays() {
+        int[] firstArray = {1, 2, 45, 56, 23, 2};
+        int[] sencondArray = {2, 56, 46, 78, 12};
+        Arrays.stream(firstArray)
+                .filter(element -> Arrays.stream(sencondArray)
+                        .anyMatch(x -> x == element)).distinct()
+                .forEach(System.out::println);
+    }
+
+    public static void main(String[] args) {
+        intersectionOfArrays();
+    }
 
 }
