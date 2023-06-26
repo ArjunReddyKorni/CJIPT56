@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Challenge100 {
 
@@ -544,7 +545,29 @@ public class Challenge100 {
     }
 
     public static void main(String[] args) {
-        intersectionOfArrays();
+
+        //intersectionOfArrays();
+        Stream<Integer> number = Stream.of(1, 2, 3, 4, 5);
+        number.filter(n -> n % 2 == 1);
+        number.forEach(System.out::println);
     }
+
+    /**
+     * fizz buzz
+     */
+    public static void fizzBuzz() {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(i);
+            }
+        }
+    }
+
 
 }
