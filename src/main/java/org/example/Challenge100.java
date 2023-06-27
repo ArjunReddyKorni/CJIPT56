@@ -545,7 +545,6 @@ public class Challenge100 {
     }
 
     public static void main(String[] args) {
-
         //intersectionOfArrays();
         Stream<Integer> number = Stream.of(1, 2, 3, 4, 5);
         number.filter(n -> n % 2 == 1);
