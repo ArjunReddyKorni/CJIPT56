@@ -546,9 +546,11 @@ public class Challenge100 {
 
     public static void main(String[] args) {
         //intersectionOfArrays();
-        Stream<Integer> number = Stream.of(1, 2, 3, 4, 5);
-        number.filter(n -> n % 2 == 1);
-        number.forEach(System.out::println);
+//        Stream<Integer> number = Stream.of(1, 2, 3, 4, 5);
+//        number.filter(n -> n % 2 == 1);
+//        number.forEach(System.out::println);
+        fizzBuzz();
+        sortByAlphabets();
     }
 
     /**
@@ -568,5 +570,19 @@ public class Challenge100 {
         }
     }
 
+    public static void sortByAlphabets() {
+        String input = "Arjun";
+        char[] characterArray = input.toCharArray();
+        for (int i = 0; i < characterArray.length - 1; i++) {
+            for (int j = 0; j < characterArray.length - i - 1; j++) {
+                if (characterArray[j] > characterArray[j + 1]) {
+                    char temp = characterArray[j];
+                    characterArray[j] = characterArray[j + 1];
+                    characterArray[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println(new String(characterArray));
+    }
 
 }
