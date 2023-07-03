@@ -585,4 +585,5 @@ public class Challenge100 {
         System.out.println(new String(characterArray));
     }
 
+
 }
