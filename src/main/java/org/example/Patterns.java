@@ -37,4 +37,23 @@ public class Patterns {
             System.out.println();
         }
     }
+
+    public static void printNumberPyramid(int rows) {
+        int number = 1;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int k = 1; k <= i; k++) {
+                System.out.print(number + " ");
+                number++;
+            }
+
+            System.out.println();
+        }
+    }
+
+
 }
